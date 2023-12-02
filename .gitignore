@@ -1,0 +1,8 @@
+
+# compiled files
+*.log
+*.aux
+*.out
+
+# macOS temp
+.DS_Store
