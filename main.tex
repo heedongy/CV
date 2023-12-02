@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Aras Gungore
+% Author : Heedong Yang
 % License : MIT
 %------------------------
 
@@ -19,6 +19,7 @@
 \usepackage{tabularx}
 \usepackage{hyphenat}
 \usepackage{fontawesome}
+\usepackage{xcolor}
 \input{glyphtounicode}
 
 
@@ -88,12 +89,11 @@
 }
 
 
-\newcommand{\resumeEducationHeading}[6]{
+\newcommand{\resumeEducationHeading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-      \textit{\small#5} & \textit{\small #6} \\
+      \textit{\textbf{\small#3}} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -118,10 +118,14 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.2in]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingItemListStart}{\begin{itemize}[label=-, leftmargin=0.15in]}
+\newcommand{\resumeSubHeadingItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\paperListStart}{\begin{enumerate}}
+\newcommand{\paperListEnd}{\end{enumerate}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -132,19 +136,19 @@
 %---------- HEADING ----------
 
 \begin{center}
-    \textbf{\Huge \scshape Aras Güngöre} \\ \vspace{3pt}
+    \textbf{\Huge \scshape Heedong Yang} \\ \vspace{7pt}
     \small
-    \faMobile \hspace{.5pt} \href{tel:905314204536}{+90 531 420 4536}
+    \faMobile \hspace{.5pt} \href{tel:820423508370}{+82 042 350 8370}
     $|$
-    \faAt \hspace{.5pt} \href{mailto:arasgungore09@gmail.com}{arasgungore09@gmail.com}
+    \faEnvelope \hspace{.5pt} \href{mailto:heedong@kaist.ac.kr}{heedong@kaist.ac.kr}
     $|$
-    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/arasgungore}{LinkedIn}
+    \faGraduationCap \hspace{.5pt} \href{https://scholar.google.co.kr/citations?user=Gqegeu0AAAAJ}{Google Scholar}
     $|$
-    \faGithub \hspace{.5pt} \href{https://github.com/arasgungore}{GitHub}
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/heedongy}{LinkedIn}
     $|$
-    \faGlobe \hspace{.5pt} \href{https://arasgungore.github.io}{Portfolio}
-    $|$
-    \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/Bogazici+University+North+Campus/@41.0863067,29.0441352,15z/data=!4m5!3m4!1s0x0:0x9d2497b07c8edb2f!8m2!3d41.0863067!4d29.0441352}{Istanbul, Turkey}
+    \faGithub \hspace{.5pt} \href{https://github.com/heedong2y}{GitHub}
+    $|$ \\
+    \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/KAIST+%EC%9C%B5%ED%95%A9%EC%97%B0%EA%B5%AC%EB%8F%99+(N5)/data=!4m6!3m5!1s0x35654bca45175ce3:0xb89a3db6416dea2c!8m2!3d36.3740132!4d127.3639474!16s%2Fg%2F119wl0_vz?entry=ttu}{N5 2312, KAIST, 291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea}
 \end{center}
 
 
@@ -154,98 +158,32 @@
 \section{Education}
   \vspace{3pt}
   \resumeSubHeadingListStart
-    
+   \resumeEducationHeading
+     {M.S. in Computer Engineering}   %{\textbf{GPA: 4.50/4.50}}
+     {Mar 2019 \textbf{--} Feb 2021}
+     {Hannam University}{Daejeon, Republic of Korea}
+        \resumeSubHeadingItemListStart
+        \small{\item{\textbf{Thesis:} Force execution of ARM-Based binary code by using Mambo}
+        \item{\textbf{Advisor:} Prof. Man-hee Lee}}
+        \resumeSubHeadingItemListEnd
     \resumeEducationHeading
-      {Boğaziçi University
-      % \normalfont{(Admission rate: 0.09\%)}
-      }{Istanbul, Turkey}
-      {B.Sc. in Electrical and Electronics Engineering;   \textbf{GPA: 3.62/4.00}}{Sep 2018 \textbf{--} Jun 2023}
-      {Minor Degree in Computer Engineering;
-      \textbf{GPA: 3.58/4.00}}{Oct 2020 \textbf{--} Jun 2023}
-        \resumeSubHeadingListStart
-        \small{\item{
-            % \textbf{Relevant coursework:} Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering, Pattern Recognition, Introduction to Digital Signal Processing, Introduction to Digital Communications, Introduction to Database Systems, Introduction to Image Processing, Machine Vision
-            \textbf{National University Admission Exam (YKS):} Ranked $75^{th}$ in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500. (Jul 2018)}}
-        \resumeSubHeadingListEnd
-    
-    % \resumeSubheading
-      % {Kocaeli Science High School
-      % \normalfont{(Admission rate: 0.85\%)}
-      % }{Kocaeli, Turkey}
-      % {High School Diploma;   \textbf{GPA: 97.03/100}}{Sep 2014 \textbf{--} Jun 2018}
-    
+      {B.S. \small{in Engineering in Computer, Communications and Unmanned Technology}}
+      {Mar 2013 \textbf{--} Feb 2019}
+      {Hannam University}{Daejeon, Republic of Korea}
   \resumeSubHeadingListEnd
 
 
 
 %----------- SKILLS -----------
 
-\section{Skills}
-  \vspace{2pt}
-  \resumeSubHeadingListStart
-    \small{\item{
-        
-        \textbf{Languages:}{ C/C++, C\#, Java, Python, Go, JavaScript, SQL, Scala, MATLAB, R} \\ \vspace{3pt}
-        
-        \textbf{Technologies:}{ Django, Node.js, React.js, MySQL, MongoDB, Git, Docker, Amazon Web Services, Kubernetes, \\ Google Cloud Platform, Unity, Linux, ROS, OpenCV, Scikit-Learn, PyTorch, Keras, TensorFlow} \\ \vspace{3pt}
-        
-    }}
-  \resumeSubHeadingListEnd
-
-
-
-%----------- WORK EXPERIENCE -----------
-
-\section{Work Experience}
-  \vspace{3pt}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {SemperTech}{Istanbul, Turkey}
-      {Software Engineer}{Sep 2023 \textbf{--} Present, Full-time}
-        \resumeItemListStart
-            \resumeItem{Currently working on the “Arçelik Digital Home Energy” project in a collaborative effort with DAI-Labor at the Technical University of Berlin under the supervision of \href{https://www.linkedin.com/in/prof-dr-dr-h-c-sahin-albayrak-65452a1/}{\color{blue}Prof. Dr. Şahin Albayrak}.}
-            \resumeItem{Simulated data exchange processes with the EEBUS protocol suite using C\# and Go frameworks. Migrated the entire framework from Go to C++ in order to ensure future adaptability for smart home IoT devices.}
-        \resumeItemListEnd
-
-    % \resumeSubheading
-      % {Scale AI}{San Francisco, California, United States (Remote)}
-      % {Prompt Engineer}{Jul 2023 \textbf{--} Sep 2023, Freelance}
-        % \resumeItemListStart
-            % \resumeItem{Developed effective Turkish prompts for diverse AI tasks and maintained a high standard of prompt quality and consistency across different competencies, adhering to established guidelines and best practices.}
-            % \resumeItem{Reviewed, validated, and scored the AI assistant's responses to ensure they align with intended AI assistant behaviors and the AI assistant produces accurate and contextually appropriate responses to given prompts.}
-            % \resumeItem{Engaged in collaborative meetings with cross-functional teams and project coordinators, actively seeking guidance, addressing queries, and collectively brainstorming strategies to generate higher quality prompts.}
-        % \resumeItemListEnd
-    
-    \resumeSubheading
-      {SESTEK Speech Enabled Software Technologies}{Istanbul, Turkey}
-      {AI Research and Development Intern}{Jan 2022 \textbf{--} Feb 2022, Internship}
-        \resumeItemListStart
-            \resumeItem{Implemented various NLP tasks, including NER, POS tagging, sentiment analysis, text classification, and extractive/generative QA using transformers and Hugging Face libraries. Conducted a literature review on information retrieval and reading comprehension to stay updated on the state-of-the-art ML models.}
-            \resumeItem{Developed a generative question answering system with Dense Passage Retrieval and Retrieval-Augmented Generation techniques using the Haystack framework on Python.}
-            \resumeItem{Worked on a Turkish open-domain question answering system by fine-tuning a BERT base model transformer with PyTorch. Evaluated exact match and F1 scores using different Turkish data sets and DeepMind's XQuAD data set and then tabularized the evaluation results.}
-        \resumeItemListEnd
-    
-    % \resumeSubheading
-      % {Ankara Metropolitan Municipality}{Ankara, Turkey}
-      % {SCADA Engineering Intern}{Aug 2021 \textbf{--} Sep 2021, Internship}
-        % \resumeItemListStart
-            % \resumeItem{Designed GSM/GPRS-based electrical control panels that are connected to local water pump automation systems. Pump station panels use digital output data received from the SCADA control center via RF transmission to control valves and pumps. Tank station panels are charged from the PV system and refill water tanks by signaling the pump station panel when the float switch is activated.}
-            % \resumeItem{Implemented motor control circuits by reading their PLC ladder diagrams and analyzed the EPLAN project documentation, HMI, and hardware components of an RTU panel.}
-        % \resumeItemListEnd
-
-    % \vspace{15pt}
-    % \resumeSubheading
-      % {Meteksan Defense Industry Inc.}{Ankara, Turkey}
-      % {Analog Design Engineering Intern}{Jul 2021 \textbf{--} Aug 2021, Internship}
-        % \resumeItemListStart
-            % \resumeItem{Designed and simulated numerous analog circuits such as voltage-mode controlled buck converter, phase-shifted full-bridge isolated DC-DC converter, and EMI filters with LTspice. Integrated these circuits and implemented a 320 W power distribution unit to be used in a radar system's power circuit board.}
-            % \resumeItem{Researched real-world compatible electronic components to be used in such circuits including GaNFETs, high-side gate drivers, and Schottky diodes.}
-            % \resumeItem{Assembled PCBs of both common and differential mode filters and used VNA Bode 100 to measure the cut-off frequencies.}
-        % \resumeItemListEnd
-    
-  \resumeSubHeadingListEnd
-
+%\section{Skills}
+%  \vspace{2pt}
+%  \resumeSubHeadingListStart
+%    \small{\item{
+%        \textbf{Languages:}{ C, C\#, F\#, Java, Python, R} \\ \vspace{3pt}
+%        \textbf{Technologies:}{ Reverse Engineering, Git, Docker,  Linux, Scikit-Learn, Keras, TensorFlow} \\ \vspace{3pt}
+%    }}
+%  \resumeSubHeadingListEnd
 
 
 %----------- RESEARCH EXPERIENCE -----------
@@ -253,87 +191,152 @@
 \section{Research Experience}
   \vspace{3pt}
   \resumeSubHeadingListStart
-  
-    \resumeSubheading
-      {Max Planck Institute for Intelligent Systems}{Stuttgart, Baden\textbf{-}Württemberg, Germany}
-      {Undergraduate Researcher}{Jun 2022 \textbf{--} Aug 2022, Internship}
-        \resumeItemListStart
-            \resumeItem{Worked in the Robotics, Collectives and Learning subgroup at the Physical Intelligence Department with former Ph.D. students \href{https://www.linkedin.com/in/sinan-ozgun-demir-981311129/}{\color{blue}Sinan Özgün Demir} and \href{https://www.linkedin.com/in/alpkaracakol/}{\color{blue}Alp Can Karacakol} on a project about 3D printing and heat-assisted magnetic programming of soft machines under the supervision of \href{https://www.linkedin.com/in/metin-sitti-0a8a712/}{\color{blue}Prof. Dr. Metin Sitti}.}
-            % \resumeItem{Updated a ROS package for converting 3D motion controller events to ROS messages so that it synchronously operates at any given loop rate with C++.}
-            \resumeItem{Implemented an Arduino Mega driver for controlling a fluid dispenser, a laser, thermocouples, and a coil set. Updated ROS nodes for parsing G-codes and controlling stage movement and built the ROS-Arduino communication network to simulate a 3D printing and magnetic programming process with Python.}
-            \resumeItem{Designed the project's system and software architecture, algorithm flowchart, and state machine diagram. Implemented and debugged ROS nodes by validating each corresponding hardware component functions correctly.}
-        \resumeItemListEnd
-    
-    % \vspace{14pt}
-    
-    \resumeSubheading
-      {Nanonetworking Research Group, Boğaziçi University}{Istanbul, Turkey}
-      {Undergraduate Researcher}{Oct 2021 \textbf{--} Jun 2022, Part-time}
-        \resumeItemListStart
-            \resumeItem{Worked on the project “Design and Implementation of Molecular Communication Systems Using Index Modulation” under the supervision of \href{https://www.linkedin.com/in/alipusane/}{\color{blue}Prof. Dr. Ali Emre Pusane}.}
-            \resumeItem{Simulated the Brownian motion of molecules in a SISO MCvD system and predicted simulation parameters such as receiver radius, diffusion coefficient, and transmitter-receiver distance using CNNs with Keras and TensorFlow.}
-            % \resumeItem{Plotted the arrival of molecules per symbol duration in a SISO MCvD system using Binomial, Poisson, and Gaussian model approximations with MATLAB.}
-            \resumeItem{Ran Monte Carlo simulations of the Gaussian model to encode/decode randomized binary sequences in a SISO MCvD system using BCSK modulation technique and calculated the bit error rate on Z-channel.}
-        \resumeItemListEnd
-    
+      \resumeSubheading
+      {Cyber Security Research Center, KAIST}{Mar 2022 \textbf{--} Present}
+      {Researcher / Binary Analysis Team}{Daejeon, Republic of Korea}
+      \vspace{3pt}
+      \resumeSubheading
+      {HPSC Lab., Hannam Univ.}{Jun 2018 \textbf{--} Feb 2022}
+      {Student Researcher }{Daejeon, Republic of Korea}
   \resumeSubHeadingListEnd
 
+%----------- RESEARCH INTEREST -----------
 
+\section{Research Interest}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+
+    \resumeItem
+      {\textbf{Binary Analysis}}
+        \resumeSubHeadingItemListStart
+            \resumeItem{Binary Disassemble \& Lifting for Binary Analysis}
+            \resumeItem{Binary Fuzzing Testing}
+            \resumeItem{Force execution of Anti-VM/Debug Binary}
+        \resumeSubHeadingItemListEnd
+
+    \resumeItem
+          {\textbf{Privacy \& Data Anonymization}}
+          \resumeSubHeadingItemListStart
+            \resumeItem{Privacy model research for Privacy Preserving Data Publishing(PPDP)}
+            \resumeItem{Analysis of the Password Leaking in Virtual Keyboard}
+          \resumeSubHeadingItemListEnd
+
+    \resumeItem
+          {\textbf{A.I Security}}
+          \resumeSubHeadingItemListStart
+            \resumeItem{Vulnerability Exploitability Prediction using A.I}
+            \resumeItem{Mouse Data Protection using GAN}
+          \resumeSubHeadingItemListEnd
+
+    \resumeItem
+            {\textbf{Architectural Security}}
+            \resumeSubHeadingItemListStart
+              \resumeItem{ARM TrustZone \& TEE Application}
+              \resumeItem{Spectre \& Meltdown Attack}
+            \resumeSubHeadingItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%----------- PUBLICATIONS IJ-----------
+
+\section{Publications - International Journal}
+  \vspace{3pt}
+  \paperListStart
+    \resumeItem
+      {\textbf{Heedong Yang}, Seungsoo Park, Kangbin Yim, Manhee Lee, “Better Not to Use Vulnerability’s Reference for Exploitability Prediction”, Applied Sciences. 2020, 10, 2555., 2020 \textbf{(SCIE/IF:2.7)}}
+  \paperListEnd
+
+%----------- PUBLICATIONS CONF-----------
+
+\section{Publications - International Conference}
+  \vspace{3pt}
+  \paperListStart
+    \resumeItem
+      {Haeun Lee, \textbf{Heedong Yang}, Sugeun Ji, Sangkil Cha, “On the Effectiveness of Synthetic Benchmarks for Evaluating Directed Grey-box Fuzzers”, In Proceedings of the 2023 Asia-Pacific Software Engineering Conference, 2023}
+
+    \resumeItem
+      {Soonhong Kwon, \textbf{Heedong Yang}, Manhee Lee, Jonghyouk Lee. “Machine Learning based Malware Detection with the 2019 KISA Data Challenge Dataset.” In Proceedings of the 2020 ACM International Conference on Intelligent Computing and its Emerging Application, pp. 1-4. 2020.}
+
+    \resumeItem
+      {\textbf{Heedong Yang}, Manhee Lee. “Demystifying arm trustzone tee client api using op-tee.” In The 9th International Conference on Smart Media and Applications, ACM, 4 pages, pp. 325-328. 2020.}
+
+    \resumeItem
+      {Kwangjun Kim, \textbf{Heedong Yang}, Byeonggeun Son, Hanjae Yoon, Kangbin Yim, Manhee Lee. “A Survey on Attack Cases Exploiting Computer Architectural Vulnerabilities.” In Innovative Mobile and Internet Services in Ubiquitous Computing: Proceedings of the 13th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS-2019), pp. 834-844. Springer International Publishing, 2020}
+  \paperListEnd
+
+%----------- PUBLICATIONS KJ-----------
+
+\section{Publications - Domestic Journal(Kor)}
+  \vspace{3pt}
+  \paperListStart
+    \resumeItem
+    {Yongki Hong, Gihyuk Ko, \textbf{Heedong Yang}, Chan Ho Ryu, Seung Hwan Ryu, “Measuring Anonymized Data Utility through Correlation Indicator”, Journal of Korean Institute of Information Scientists and Engineers, 50(12), pp. 1163-1173, 2023 (\textbf{KCI})}
+
+    \resumeItem
+    {Yongki Hong, Gihyuk Ko, \textbf{Heedong Yang}, Seung Hwan Ryu, “Privacy-Preserving Data Publishing: Research on Trends in De-identification Techniques for Structured and Unstructured Data”, Journal of Korean Institute of Information Scientists and Engineers, 50(11), pp. 1008-1029, 2023 (\textbf{KCI})}
+
+    \resumeItem
+      {Seung Hwan Ryu, Yongki Hong, Gihyuk Ko, \textbf{Heedong Yang}, Jong Wan Kim, “Privacy Model Recommendation System Based on Data Feature Analysis”, Journal of The Korea Society of Computer and Information, 28(9), pp. 81-92, 2023 (\textbf{KCI})}
+
+    \resumeItem
+      {\textbf{Heedong Yang}, Manhee Lee, “Analysis of the Password Leaking in Virtual Keyboard”, Journal of the Korea Institute of Information Security \& Cryptology, 32(5), pp. 827-835, 2022 (\textbf{KCI})}
+
+    \resumeItem
+      {Munsun Kim, \textbf{Heedong Yang}, Kwangjun Kim, Manhee Lee, “Detecting Spectre Malware Binary through Function Level N-gram Comparison”, Journal of the Korea Institute of Information Security \& Cryptology, 30(6), pp. 1043-1052, 2020 (\textbf{KCI})}
+
+  \paperListEnd
+
+
+  %----------- TALK -----------
+
+\section{Talks \& Presentations}
+\vspace{3pt}
+\paperListStart
+  \resumeItem
+    {\textbf{Heedong Yang}, “Suitability verification for NVD Reference Feature used in predicting vulnerability exploitation”, Open Tech Talk (Speaker), Samsung Security Tech Forum 2019, Aug. 2019}
+ \paperListEnd
 
 %----------- AWARDS & ACHIEVEMENTS -----------
 
-% \section{Awards \& Achievements}
-  % \vspace{2pt}
-  % \resumeSubHeadingListStart
-    % \small{\item{
-        % \textbf{High Honors Degree:}{ Awarded to Bachelor alumni who have graduated with a GPA greater than or equal to 3.50 by Boğaziçi University. (Jul 2023)} \\ \vspace{3pt}
+\section{Awards \& Honors}
+  \vspace{2pt}
+  \paperListStart
+   \resumeItem{\textbf{CISC-W'21:} Best Paper Award (Nov. 2021), South Korea}
+   \resumeItem{\textbf{SMA-2020:} Best Paper Award \- Bronze (Sep. 2020), South Korea}
+   \resumeItem{\textbf{CISC-S'20:} Best Paper Award (Jun. 2020), South Korea}
+   \resumeItem{\textbf{KIISC-CC'19:} Best Paper Award (Sep. 2019), South Korea}
+  \paperListEnd
 
-        % \textbf{TÜBİTAK 2247-C Intern Researcher Scholarship:}{ Awarded to undergraduate students who take part in research projects carried out by the Scientific and Technological Research Council of Turkey (TÜBİTAK). (Dec 2021 \textbf{--} Jun 2022)} \\ \vspace{3pt}
-    
-        % \textbf{National University Admission Exam (YKS):}{ Ranked $75^{th}$ in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500. (Jul 2018)} \\ \vspace{3pt}
-        
-        % \textbf{KYK Outstanding Success Scholarship:}{ Awarded to undergraduate students who have been ranked in the top 100 on National University Admission Exam by Higher Education Credit and Hostels Institution (KYK). (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
-        
-        % \textbf{Boğaziçi University Success Scholarship:}{ Awarded to undergraduate students who have been ranked in the top 100 on National University Admission Exam by Boğaziçi University. (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
-        
-        % \textbf{Duolingo English Test (DET):}{ Overall Score: 135/160} \\ \vspace{3pt}
-        
-        % \textbf{Boğaziçi University English Proficiency Test (BUEPT):}{ Achieved the highest grade A on the BUEPT grading scheme with a total score in the range of 85-100.} \\ \vspace{3pt}
-        
-        % \textbf{Kocaeli Science High School Salutatorian Award:}{ Graduated as the second-highest ranked student in my class.}
-    % }}
-  % \resumeSubHeadingListEnd
+%----------- PATENTS-----------
 
+\section{Patents}
+  \vspace{3pt}
+  \paperListStart
+    \resumeItem
+      {\textbf{PRIVACY MODEL RECOMMENDATION AND DE-IDENTIFICATION METHOD FOR PREVENTING PRIVACY BREACH AND SYSTEM PERFOMRING THE SAME}\\APPLICATION(10-2023-0113310), South Korea, 2023}
+  \paperListEnd
 
 
 %----------- PROJECTS -----------
 
-% \section{Projects}
-    % \vspace{3pt}
-    % \resumeSubHeadingListStart
-      
-      % \resumeProjectHeading
-        % {\textbf{Filters and Fractals} $|$ \emph{\href{https://github.com/arasgungore/filters-and-fractals}{\color{blue}GitHub}}}{}
-          % \resumeItemListStart
-            % \resumeItem{A C project which implements a variety of image processing operations that manipulate the size, filter, brightness, contrast, saturation, and other properties of PPM images from scratch.}
-            % \resumeItem{Added recursive fractal generation functions to model popular fractals including Mandelbrot set, Julia set, Koch curve, Barnsley fern, and Sierpinski triangle in PPM format.}
-          % \resumeItemListEnd
-      
-      % \resumeProjectHeading
-        % {\textbf{Chess Bot} $|$ \emph{\href{https://github.com/arasgungore/chess-bot}{\color{blue}GitHub}}}{}
-          % \resumeItemListStart
-            % \resumeItem{A C++ project in which you can play chess against an AI with a specified decision tree depth that uses alpha-beta pruning algorithm to predict the optimal move.}
-            % \resumeItem{Aside from basic moves, this mini chess engine also implements chess rules such as castling, en passant, fifty-move rule, threefold repetition, and pawn promotion.}
-          % \resumeItemListEnd
-      
-      % \resumeProjectHeading
-        % {\textbf{CMPE 250 Projects} $|$ \emph{\href{https://github.com/arasgungore/CMPE250-projects}{\color{blue}GitHub}}}{}
-          % \resumeItemListStart
-            % \resumeItem{Five Java projects assigned for the Data Structures and Algorithms (CMPE 250) course in the Fall 2021-22 semester.}
-            % \resumeItem{These projects apply DS\&A concepts such as discrete-event simulation (DES) using priority queues, Dijkstra's shortest path algorithm, Prim's algorithm to find the minimum spanning tree (MST), Dinic's algorithm for maximum flow problems, and weighted job scheduling with dynamic programming to real-world problems.}
-          % \resumeItemListEnd
-      
-    % \resumeSubHeadingListEnd
+\section{Projects}
+    \vspace{3pt}
+    \resumeItemListStart
+      \resumeItem{\textbf{Development of SBOM Technologies for Securing Software Supply Chains
+      } \\ Researcher / IITP / Apr. 2022 - Present}
+      \resumeItem{\textbf{High Assurance of Smart Contract for Secure Software Development Life Cycle} \\ Researcher / IITP / Mar. 2022 - Present}
+      \resumeItem{\textbf{Development of Automated Vulnerability Discovery Technologies for Blockchain Platform Security} \\ Researcher / IITP / Mar. 2022 - Dec. 2022}
+      \resumeItem{\textbf{The analysis of trends in the security verification of digital general items for the regulation and utilization of nuclear facilities, and the control and regulation of supply chains for regulatory purposes} \\ Student Researcher / KINAC / Jul. 2021 - Feb. 2022}
+      \resumeItem{\textbf{Research on network training content using GAN-based AI technology} \\ Student Researcher / ETRI affiliated research institute / Apr. 2021 - Oct. 2021}
+      \resumeItem{\textbf{Research on IoT device firmware base OS kernel version and vulnerability identification technology} \\ Student Researcher / ETRI affiliated research institute / Apr. 2021 - Oct. 2021}
+      \resumeItem{\textbf{Research on QKD and PQC utilization and Quantum Cryptography Communication security requirements analysis} \\ Student Researcher / KISTI / Apr. 2021 - Oct. 2021}
+      \resumeItem{\textbf{Research Laboratory of RAS Assurance for Cognitive Collaborative Embedded Systems Software} \\ Student Researcher / NRF / Mar. 2021 - Feb. 2022}
+      \resumeItem{\textbf{Research on Binary Analysis Technology for Securing Stable Execution Paths} \\ Student Researcher / ETRI affiliated research institute / Apr. 2020 - Oct. 2020}
+      \resumeItem{\textbf{Research on Identifying Vulnerabilities in Firmware components} \\ Student Researcher / ETRI affiliated research institute / Apr. 2020 - Oct. 2020}
+      \resumeItem{\textbf{Research on Meltdown and Spectre Attacks from the Perspective of TEE} \\ Student Researcher / ETRI affiliated research institute / Apr. 2019 - Oct. 2019}
+      \resumeItem{\textbf{Research on Establishment of a System for Responding to Supply Chain Attacks} \\ Student Researcher / ETRI affiliated research institute / Apr. 2019 - Oct. 2019}
+      \resumeItem{\textbf{Research Laboratory of RAS Assurance for Distributed Embedded Systems Software} \\ Student Researcher / NRF / Jun. 2018 - Feb. 2021}
+    \resumeItemListEnd
 
 
 
@@ -344,7 +347,7 @@
   % \resumeSubHeadingListStart
     % \small{\item{
         % \textbf{Major coursework:}{ Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering, Pattern Recognition, Introduction to Digital Signal Processing, Introduction to Digital Communications, Introduction to Database Systems, Introduction to Image Processing, Machine Vision} \\ \vspace{3pt}
-        
+
         % \textbf{Minor coursework:}{ Discrete Computational Structures, Introduction to Object-Oriented Programming, Data Structures and Algorithms, Computer Organization, Fundamentals of Software Engineering}
     % }}
   % \resumeSubHeadingListEnd
@@ -355,10 +358,10 @@
 
 % \section{Certificates}
   % \resumeSubHeadingListStart
-    
+
     % \resumeOrganizationHeading
       % {Procter \& Gamble VIA Certificate Program}{Feb 2022}{Business Skills, Data and Digital Skills, Project Management and Personal Productivity}
-    
+
   % \resumeSubHeadingListEnd
 
 
@@ -367,10 +370,10 @@
 
 % \section{Organizations}
   % \resumeSubHeadingListStart
-    
+
     % \resumeOrganizationHeading
       % {Institute of Electrical and Electronics Engineers (IEEE)}{Feb 2022 -- Present}{Student Member}
-    
+
   % \resumeSubHeadingListEnd
 
 
