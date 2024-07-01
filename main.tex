@@ -114,6 +114,13 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newlist{customlistC}{enumerate}{1}
+\setlist[customlistC,1]{label=\small{[C\arabic*]}}
+\newlist{customlistJ}{enumerate}{1}
+\setlist[customlistJ,1]{label=\small{[J\arabic*]}}
+\newlist{customlistK}{enumerate}{1}
+\setlist[customlistK,1]{label=\small{[K\arabic*]}}
+
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -124,6 +131,12 @@
 \newcommand{\resumeSubHeadingItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\paperConfListStart}{\begin{customlistC}}
+\newcommand{\paperConfListEnd}{\end{customlistC}\vspace{-5pt}}
+\newcommand{\paperJourListStart}{\begin{customlistJ}}
+\newcommand{\paperJourListEnd}{\end{customlistJ}\vspace{-5pt}}
+\newcommand{\paperKJourListStart}{\begin{customlistK}}
+\newcommand{\paperKJourListEnd}{\end{customlistK}\vspace{-5pt}}
 \newcommand{\paperListStart}{\begin{enumerate}}
 \newcommand{\paperListEnd}{\end{enumerate}\vspace{-5pt}}
 
@@ -214,70 +227,56 @@
 \section{Research Interest}
   \vspace{3pt}
   \resumeSubHeadingListStart
+    \resumeItem
+    {\textbf{Main topic (Software Component Analysis)}}
+      \resumeSubHeadingItemListStart
+          \resumeItem{Open-source Software Security, Supply Chain Security}
+          \resumeItem{Binary Code Similarity Detection, Vulnerability Detection}
+      \resumeSubHeadingItemListEnd
 
     \resumeItem
-      {\textbf{Binary Analysis}}
+      {\textbf{Previous topics}}
         \resumeSubHeadingItemListStart
-            \resumeItem{Binary Disassemble \& Lifting for Binary Analysis}
-            \resumeItem{Binary Fuzzing Testing}
-            \resumeItem{Force execution of Anti-VM/Debug Binary}
-        \resumeSubHeadingItemListEnd
-
-    \resumeItem
-          {\textbf{Privacy \& Data Anonymization}}
-          \resumeSubHeadingItemListStart
-            \resumeItem{Privacy model research for Privacy Preserving Data Publishing(PPDP)}
-            \resumeItem{Analysis of the Password Leaking in Virtual Keyboard}
-          \resumeSubHeadingItemListEnd
-
-    \resumeItem
-          {\textbf{A.I Security}}
-          \resumeSubHeadingItemListStart
-            \resumeItem{Vulnerability Exploitability Prediction using A.I}
-            \resumeItem{Mouse Data Protection using GAN}
-          \resumeSubHeadingItemListEnd
-
-    \resumeItem
-            {\textbf{Architectural Security}}
-            \resumeSubHeadingItemListStart
-              \resumeItem{ARM TrustZone \& TEE Application}
-              \resumeItem{Spectre \& Meltdown Attack}
+            \resumeItem{Binary Analysis (Disassemble \& Lifting, Fuzzing, Binary force execution)}
+            \resumeItem{Data Anonymization (PPDP)}
+            \resumeItem{A.I Security (Password Leaking, Vulnerability Exploitability Prediction)}
+            \resumeItem{Architectural Security(ARM TrustZone, Spectre \& Meltdown Attack)}
             \resumeSubHeadingItemListEnd
 
   \resumeSubHeadingListEnd
+
+  %----------- PUBLICATIONS IC-----------
+
+\section{Publications - International Conference}
+\vspace{3pt}
+\paperConfListStart
+  \resumeItem
+    {Haeun Lee, \textbf{Heedong Yang}, Sugeun Ji, Sangkil Cha, “On the Effectiveness of Synthetic Benchmarks for Evaluating Directed Grey-box Fuzzers”, In Proceedings of the 2023 Asia-Pacific Software Engineering Conference, 2023}
+
+  \resumeItem
+    {Soonhong Kwon, \textbf{Heedong Yang}, Manhee Lee, Jonghyouk Lee. “Machine Learning based Malware Detection with the 2019 KISA Data Challenge Dataset.” In Proceedings of the 2020 ACM International Conference on Intelligent Computing and its Emerging Application, pp. 1-4. 2020.}
+
+  \resumeItem
+    {\textbf{Heedong Yang}, Manhee Lee. “Demystifying arm trustzone tee client api using op-tee.” In The 9th International Conference on Smart Media and Applications, ACM, 4 pages, pp. 325-328. 2020.}
+
+  \resumeItem
+    {Kwangjun Kim, \textbf{Heedong Yang}, Byeonggeun Son, Hanjae Yoon, Kangbin Yim, Manhee Lee. “A Survey on Attack Cases Exploiting Computer Architectural Vulnerabilities.” In Innovative Mobile and Internet Services in Ubiquitous Computing: Proceedings of the 13th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS-2019), pp. 834-844. Springer International Publishing, 2020}
+\paperConfListEnd
 
 %----------- PUBLICATIONS IJ-----------
 
 \section{Publications - International Journal}
   \vspace{3pt}
-  \paperListStart
+  \paperJourListStart
     \resumeItem
       {\textbf{Heedong Yang}, Seungsoo Park, Kangbin Yim, Manhee Lee, “Better Not to Use Vulnerability’s Reference for Exploitability Prediction”, Applied Sciences. 2020, 10, 2555., 2020 \textbf{(SCIE/IF:2.7)}}
-  \paperListEnd
-
-%----------- PUBLICATIONS CONF-----------
-
-\section{Publications - International Conference}
-  \vspace{3pt}
-  \paperListStart
-    \resumeItem
-      {Haeun Lee, \textbf{Heedong Yang}, Sugeun Ji, Sangkil Cha, “On the Effectiveness of Synthetic Benchmarks for Evaluating Directed Grey-box Fuzzers”, In Proceedings of the 2023 Asia-Pacific Software Engineering Conference, 2023}
-
-    \resumeItem
-      {Soonhong Kwon, \textbf{Heedong Yang}, Manhee Lee, Jonghyouk Lee. “Machine Learning based Malware Detection with the 2019 KISA Data Challenge Dataset.” In Proceedings of the 2020 ACM International Conference on Intelligent Computing and its Emerging Application, pp. 1-4. 2020.}
-
-    \resumeItem
-      {\textbf{Heedong Yang}, Manhee Lee. “Demystifying arm trustzone tee client api using op-tee.” In The 9th International Conference on Smart Media and Applications, ACM, 4 pages, pp. 325-328. 2020.}
-
-    \resumeItem
-      {Kwangjun Kim, \textbf{Heedong Yang}, Byeonggeun Son, Hanjae Yoon, Kangbin Yim, Manhee Lee. “A Survey on Attack Cases Exploiting Computer Architectural Vulnerabilities.” In Innovative Mobile and Internet Services in Ubiquitous Computing: Proceedings of the 13th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS-2019), pp. 834-844. Springer International Publishing, 2020}
-  \paperListEnd
+  \paperJourListEnd
 
 %----------- PUBLICATIONS KJ-----------
 
 \section{Publications - Domestic Journal(Kor)}
   \vspace{3pt}
-  \paperListStart
+  \paperKJourListStart
     \resumeItem
     {Yongki Hong, Gihyuk Ko, \textbf{Heedong Yang}, Chan Ho Ryu, Seung Hwan Ryu, “Measuring Anonymized Data Utility through Correlation Indicator”, Journal of Korean Institute of Information Scientists and Engineers, 50(12), pp. 1163-1173, 2023 (\textbf{KCI})}
 
@@ -293,7 +292,7 @@
     \resumeItem
       {Munsun Kim, \textbf{Heedong Yang}, Kwangjun Kim, Manhee Lee, “Detecting Spectre Malware Binary through Function Level N-gram Comparison”, Journal of the Korea Institute of Information Security \& Cryptology, 30(6), pp. 1043-1052, 2020 (\textbf{KCI})}
 
-  \paperListEnd
+  \paperKJourListEnd
 
 
   %----------- TALK -----------
