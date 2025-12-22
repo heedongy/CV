@@ -1,0 +1,113 @@
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks, pdftitle={Heedong Yang CV}, pdfauthor={Heedong Yang}]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+
+%---------- FONT OPTIONS ----------
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+%-------------------------
+% Basic item command
+\newcommand{\etal}{\textit{et al}.\xspace}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% Heading commands
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}}
+
+\newcommand{\resumeSubSubheading}[2]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}}
+
+\newcommand{\resumeEducationHeading}[4]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\textbf{\small#3}} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}}
+
+\newcommand{\resumeProjectHeading}[2]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}}
+
+\newcommand{\resumeOrganizationHeading}[4]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+    \textit{\small#3}
+  \end{tabular*}\vspace{-7pt}}
+
+% Custom list environments for publications
+\newlist{customlistC}{enumerate}{1}
+\newlist{customlistJ}{enumerate}{1}
+\newlist{customlistK}{enumerate}{1}
+\setlist[customlistC,1]{label=\small{[C\arabic*]}}
+\setlist[customlistJ,1]{label=\small{[J\arabic*]}}
+\setlist[customlistK,1]{label=\small{[K\arabic*]}}
+
+% List start/end commands
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingItemListStart}{\begin{itemize}[label=-, leftmargin=0.15in]}
+\newcommand{\resumeSubHeadingItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\paperConfListStart}{\begin{customlistC}}
+\newcommand{\paperConfListEnd}{\end{customlistC}\vspace{-5pt}}
+\newcommand{\paperJourListStart}{\begin{customlistJ}}
+\newcommand{\paperJourListEnd}{\end{customlistJ}\vspace{-5pt}}
+\newcommand{\paperKJourListStart}{\begin{customlistK}}
+\newcommand{\paperKJourListEnd}{\end{customlistK}\vspace{-5pt}}
+\newcommand{\paperListStart}{\begin{enumerate}}
+\newcommand{\paperListEnd}{\end{enumerate}\vspace{-5pt}}

@@ -6,146 +6,13 @@
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks, pdftitle={Heedong Yang CV}, pdfauthor={Heedong Yang}]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{hyphenat}
-\usepackage{fontawesome}
-\usepackage{xcolor}
-\input{glyphtounicode}
-
-
-%---------- FONT OPTIONS ----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeSubSubheading}[2]{
-    \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeEducationHeading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\textbf{\small#3}} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-
-\newcommand{\resumeProjectHeading}[2]{
-    \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeOrganizationHeading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-      \textit{\small#3}
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newlist{customlistC}{enumerate}{1}
-\setlist[customlistC,1]{label=\small{[C\arabic*]}}
-\newlist{customlistJ}{enumerate}{1}
-\setlist[customlistJ,1]{label=\small{[J\arabic*]}}
-\newlist{customlistK}{enumerate}{1}
-\setlist[customlistK,1]{label=\small{[K\arabic*]}}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.2in]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeSubHeadingItemListStart}{\begin{itemize}[label=-, leftmargin=0.15in]}
-\newcommand{\resumeSubHeadingItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\paperConfListStart}{\begin{customlistC}}
-\newcommand{\paperConfListEnd}{\end{customlistC}\vspace{-5pt}}
-\newcommand{\paperJourListStart}{\begin{customlistJ}}
-\newcommand{\paperJourListEnd}{\end{customlistJ}\vspace{-5pt}}
-\newcommand{\paperKJourListStart}{\begin{customlistK}}
-\newcommand{\paperKJourListEnd}{\end{customlistK}\vspace{-5pt}}
-\newcommand{\paperListStart}{\begin{enumerate}}
-\newcommand{\paperListEnd}{\end{enumerate}\vspace{-5pt}}
+\input{pkg.tex}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
-
 \title{Heedong Yang - CV}
 \author{Heedong Yang}
 
@@ -158,11 +25,11 @@
     $|$
     \faGraduationCap \hspace{.5pt} \href{https://scholar.google.co.kr/citations?user=Gqegeu0AAAAJ}{Google Scholar}
     $|$
-    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/heedongy}{LinkedIn}
+\faLinkedin \hspace{.5pt} \href{https://www.linkedin.com/in/heedongy}{LinkedIn}
     $|$
     \faGithub \hspace{.5pt} \href{https://github.com/heedongy}{GitHub}
     $|$ \\
-    \faMapMarker \hspace{.5pt} 515, Jung Woonoh IT \& General Education Center, Korea University, \\
+\faMapMarker \hspace{.5pt} 515, Jung Woonoh IT \& General Education Center, Korea University, \\
     \hspace{15pt} Anam-ro 145, Seongbuk-gu, Seoul, 02841, South Korea
 \end{center}
 
@@ -231,21 +98,13 @@
 \section{Research Interest}
   \vspace{3pt}
   \resumeSubHeadingListStart
-    \resumeItem
-    {\textbf{Main topic (Software Component Analysis)}}
+    \resumeItem{\textbf{Main Topic:} Software Component Analysis}
       \resumeSubHeadingItemListStart
-          \resumeItem{Open-source Software Security, Supply Chain Security}
-          \resumeItem{Binary Code Similarity Detection, Vulnerability Detection}
+          \resumeItem{Open-source software security; Supply chain security}
+          \resumeItem{Binary code similarity detection; Vulnerability detection}
       \resumeSubHeadingItemListEnd
 
-    \resumeItem
-      {\textbf{Previous topics}}
-        \resumeSubHeadingItemListStart
-            \resumeItem{Binary Analysis (Disassemble \& Lifting, Fuzzing, Binary force execution)}
-            \resumeItem{Data Anonymization (PPDP)}
-            \resumeItem{A.I Security (Password Leaking, Vulnerability exploit prediction)}
-            \resumeItem{Architectural Security(ARM TrustZone, Spectre \& Meltdown Attack)}
-            \resumeSubHeadingItemListEnd
+    \resumeItem{\textbf{Previous Topics:} Binary analysis; Data anonymization; ML-based security; architectural security}
 
   \resumeSubHeadingListEnd
 
@@ -338,15 +197,15 @@
 \vspace{3pt}
 \paperListStart
   \resumeItem
-    {\textbf{KOALA (KAIST Open-source Anonymization Platform)} \\
-    Main Developer, Java, 2023\\
-    A platform for data anonymization balancing privacy protection with data utility using ARX framework \\
-    \faGithub \hspace{.5pt} \href{https://github.com/KAIST-CSRC-Privacy/KOALA}{github.com/KAIST-CSRC-Privacy/KOALA}}
-  \resumeItem
     {\textbf{B2R2} \\
-    Contributor, F\#, 2022 \textbf{--} 2023 \\
+    Main Contributor, F\#, 2022 \textbf{--} 2023 \\
     An open-source tool for binary analysis \\
     \faGithub \hspace{.5pt} \href{https://github.com/B2R2-org/B2R2}{github.com/B2R2-org/B2R2}}
+  \resumeItem
+    {\textbf{KOALA (KAIST Open-source Anonymization Platform)} \\
+    Main Contributor, Java, 2023\\
+    A platform for data anonymization balancing privacy protection with data utility using ARX framework \\
+    \faGithub \hspace{.5pt} \href{https://github.com/KAIST-CSRC-Privacy/KOALA}{github.com/KAIST-CSRC-Privacy/KOALA}}
 \paperListEnd
 
 
