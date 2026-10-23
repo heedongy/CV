@@ -90,13 +90,25 @@
     \textit{\small#3}
   \end{tabular*}\vspace{-7pt}}
 
-% Custom list environments for publications
+  
+\makeatletter
+\newcount\revtotal
+\newcommand{\revcount}[1]{%
+  \begingroup
+    \global\revtotal\z@
+    \renewcommand{\resumeItem}[1]{\global\advance\revtotal\@ne}%
+    \setbox\z@\hbox{#1}%
+  \endgroup}
+\newcommand{\revnum}[1]{\@revnum{\csname c@#1\endcsname}}
+\newcommand{\@revnum}[1]{\number\numexpr\revtotal+1-#1\relax}
+\AddEnumerateCounter{\revnum}{\@revnum}{0}
+\makeatother
 \newlist{customlistC}{enumerate}{1}
 \newlist{customlistJ}{enumerate}{1}
 \newlist{customlistK}{enumerate}{1}
-\setlist[customlistC,1]{label=\small{[C\arabic*]}}
-\setlist[customlistJ,1]{label=\small{[J\arabic*]}}
-\setlist[customlistK,1]{label=\small{[K\arabic*]}}
+\setlist[customlistC,1]{label=\small{[C\revnum*]}}
+\setlist[customlistJ,1]{label=\small{[J\revnum*]}}
+\setlist[customlistK,1]{label=\small{[K\revnum*]}}
 
 % List start/end commands
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.2in]}
@@ -105,12 +117,9 @@
 \newcommand{\resumeSubHeadingItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\paperConfListStart}{\begin{customlistC}}
-\newcommand{\paperConfListEnd}{\end{customlistC}\vspace{-5pt}}
-\newcommand{\paperJourListStart}{\begin{customlistJ}}
-\newcommand{\paperJourListEnd}{\end{customlistJ}\vspace{-5pt}}
-\newcommand{\paperKJourListStart}{\begin{customlistK}}
-\newcommand{\paperKJourListEnd}{\end{customlistK}\vspace{-5pt}}
+\long\def\paperConfListStart#1\paperConfListEnd{\revcount{#1}\begin{customlistC}#1\end{customlistC}\vspace{-5pt}}
+\long\def\paperJourListStart#1\paperJourListEnd{\revcount{#1}\begin{customlistJ}#1\end{customlistJ}\vspace{-5pt}}
+\long\def\paperKJourListStart#1\paperKJourListEnd{\revcount{#1}\begin{customlistK}#1\end{customlistK}\vspace{-5pt}}
 \newcommand{\paperListStart}{\begin{enumerate}}
 \newcommand{\paperListEnd}{\end{enumerate}\vspace{-5pt}}
 \newcommand{\talkListStart}{\begin{enumerate}}
